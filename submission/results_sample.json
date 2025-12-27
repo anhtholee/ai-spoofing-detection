@@ -1,0 +1,32 @@
+[
+    {
+        "event_id": "65873e0e-d76a-4c2e-9b99-d0902ea8bf67",
+        "spoof_score": 0.75,
+        "spoof_flag": 1,
+        "explanation": "This event was flagged for GPS spoofing primarily because the device explicitly reported that **'mock locations' were enabled**.\n\nThis setting allows an application to feed artificial GPS coordinates to the device, overriding its true physical location and indicating intentional location manipulation. The machine learning model also showed high confidence in this flag (score 0.75), which was confirmed by ground truth."
+    },
+    {
+        "event_id": "bd19097b-7f47-4367-b74d-b7f88147a58b",
+        "spoof_score": 0.82,
+        "spoof_flag": 1,
+        "explanation": "This event is highly likely to be GPS spoofing.\n\nThe primary reason for the flag is that the device had **\"Mock Location\" functionality enabled**. This setting explicitly allows an app or user to manually provide a false GPS position, overriding the device's actual location, and is a strong indicator of intentional spoofing.\n\nThe machine learning model also flagged this event with a high spoofing score of 0.82, confirming the suspicion."
+    },
+    {
+        "event_id": "86c89aa0-8dea-4a33-8872-e1a71e50b2f6",
+        "spoof_score": 0.72,
+        "spoof_flag": 1,
+        "explanation": "This event was flagged for potential GPS spoofing because the device explicitly had **\"mock location\" enabled**. This is a developer setting that allows apps to feed fake GPS coordinates to the device, making it a very strong indicator of spoofing.\n\nThe machine learning model also assigned a high spoofing score (0.72), and the event was confirmed to be spoofed by ground truth data."
+    },
+    {
+        "event_id": "65f4d201-e8ab-4252-a575-a108bbc09498",
+        "spoof_score": 0.84,
+        "spoof_flag": 1,
+        "explanation": "The machine learning model flagged this event for potential GPS spoofing with high confidence (score 0.84). The most likely reason is that **\"mock location\" was explicitly enabled on the device (`mock_location_enabled: true`)**.\n\nThis is a developer setting that allows an app to fake the device's GPS coordinates, directly indicating that the reported location may not be genuine."
+    },
+    {
+        "event_id": "5e024a63-6e35-4004-9a09-2db2a0f3cb82",
+        "spoof_score": 1.0,
+        "spoof_flag": 1,
+        "explanation": "This event was flagged for GPS spoofing because the machine learning model detected an **unusually high number of GPS satellites reported (25)**, which is a strong indicator of an artificially generated GPS signal.\n\nWhile \"mock location\" was not enabled on the device, the exceptionally high satellite count, combined with the machine learning model's high confidence (1.0) and the ground truth confirmation, strongly suggests that a sophisticated GPS spoofing method was used to manipulate the location data."
+    }
+]
